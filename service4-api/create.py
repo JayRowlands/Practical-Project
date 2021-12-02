@@ -1,0 +1,27 @@
+import sqlite3 as sql
+from application import db
+from application.models import Prize
+db.drop_all()
+db.create_all()
+
+pikachu_teddy=Prize(prize_name='Pikachu Teddy', colour='Yellow', cost=5, type='Cuddly')
+shop_token=Prize(prize_name='Shop Token',colour='Green',cost=1 ,type='Token')
+baby_yoda_teddy=Prize(prize_name='Baby Yoda Teddy',colour='Greeb',cost=10 ,type='Cuddly')
+watch=Prize(prize_name='Watch',colour='Silver',cost=20 ,type='Accessory')
+haribo=Prize(prize_name='Haribo',colour='Blue',cost=1 ,type='Food')
+giant_cadbury_bar=Prize(prize_name='Giant Cadbury Bar',colour='Purple',cost=20 ,type='Food')
+bracelet=Prize(prize_name='Bracelet',colour='Black',cost=3 ,type='Accessory')
+fireman_sam_teddy=Prize(prize_name='Fireman Sam Teddy',colour='Red',cost=10 ,type='Cuddly')
+sweet_necklace=Prize(prize_name='Sweet Necklace',colour='Purple',cost=1 ,type='Food')
+olaf_keychain=Prize(prize_name='Olaf Keychain',colour='White',cost=4 ,type='Accessory')
+db.session.add(pikachu_teddy)
+db.session.add(shop_token)
+db.session.add(baby_yoda_teddy)
+db.session.add(watch)
+db.session.add(haribo)
+db.session.add(giant_cadbury_bar)
+db.session.add(bracelet)
+db.session.add(fireman_sam_teddy)
+db.session.add(sweet_necklace)
+db.session.add(olaf_keychain)
+db.session.commit()
