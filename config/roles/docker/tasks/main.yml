@@ -1,0 +1,11 @@
+---
+# tasks file for docker
+- name: Install Docker from script
+  shell:
+    cmd: curl https://get.docker.com | bash
+
+- name: add Jay to group
+  user: 
+    name: Jay
+    group: docker
+    append: yes
