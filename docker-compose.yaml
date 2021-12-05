@@ -10,32 +10,26 @@ services:
       - type: bind
         source: ./nginx.conf
         target: /etc/nginx/nginx.conf
+
   front-end:
-    image: front-end:latest
+    image: jayrowlands/front-end:latest
     container_name: front-end
     build: ./front-end
-    ports:
-      - target: 5000
-        published: 5000
   service2:
-    image: service2:latest
+    image: jayrowlands/service2:latest
     container_name: service2-api
     build: ./service2-api
-    ports:
-      - target: 5001
-        published: 5001
+    deploy:
+      replicas: 3
   service3:
-    image: service3:latest
+    image: jayrowlands/service3:latest
     container_name: service3-api
     build: ./service3-api
-    ports:
-      - target: 5002
-        published: 5002
+    deploy:
+      replicas: 3
   service4:
-    image: service4:latest
+    image: jayrowlands/service4:latest
     container_name: service4-api
     build: ./service4-api
-    ports:
-      - target: 5003
-        published: 5003
- 
+    deploy:
+      replicas: 3 

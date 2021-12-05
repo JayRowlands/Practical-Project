@@ -1,3 +1,4 @@
+
 from application import db
 
 class Prize(db.Model):
