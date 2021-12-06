@@ -21,9 +21,9 @@ Before designing and developing the application, a risk assessment was created t
 
 To effectively manage this project, I used Jira to set up a sprint containing user stories that listed tasks detailing the requirements of the system in correlation to the design set out. 
 
-![DOP Board1](https://github.com/JayRowlands/Practical-Project/blob/main/resources/dop-board1.png)
+![DOP Board1](https://github.com/JayRowlands/Practical-Project/blob/main/resources/dop-board2.png)
 
-![DOP Board2](https://github.com/JayRowlands/Practical-Project/blob/main/resources/dop-board2.png)
+![DOP Board2](https://github.com/JayRowlands/Practical-Project/blob/main/resources/dop-board1.png)
 
 
 Furthermore, for the version control system, Git was used with a linked Github repository for the remote. This allowed me to keep functioning versions of code which I sometimes referred back to if for any reason that function stopped working, it also acts as a backup for the project work. Jenkins was used as a CI server with a webhook to the github repo to clone changes as they are pushed and deploy the changes. 
@@ -43,10 +43,12 @@ The Jenkins pipeline is bullet pointed in detail below:
 To meet the requirement set by the brief, I have developed an arcade grabber which uses get requests from service 2 and 3 to get the random values and a post request to use the values in service 4. The front end then displays all values and if the player is a winner or not.
 
 Winner!
+
 ![Winner](https://github.com/JayRowlands/Practical-Project/blob/main/resources/winner.png)
 
 
 Loser! 
+
 ![Loser](https://github.com/JayRowlands/Practical-Project/blob/main/resources/loser.png)
 
 ## Known Issues
